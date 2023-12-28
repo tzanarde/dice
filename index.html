@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="/scripts/scripts.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <title>Rolar Dados</title>
+</head>
+<body>
+    <header>
+        <div class="tool-bar">
+            <div class="dice-buttons">
+                <div id="d4-button" class="roll-button" onclick='rollDice(4)'>d4</div>
+                <div id="d6-button" class="roll-button" onclick='rollDice(6)'>d6</div>
+                <div id="d8-button" class="roll-button" onclick='rollDice(8)'>d8</div>
+                <div id="d10-button" class="roll-button" onclick='rollDice(10)'>d10</div>
+                <div id="d12-button" class="roll-button" onclick='rollDice(12)'>d12</div>
+                <div id="d20-button" class="roll-button" onclick='rollDice(20)'>d20</div>
+                <div id="d100-button" class="roll-button" onclick='rollDice(100)'>d100</div>
+            </div>
+            <div class="tool-buttons">
+                <input type="number" id="dices-quantity" value="1" min="1">
+                <div id="clear-table-button" class="tool-button" onclick='cleanTable()'>Limpar</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="dices-container"></div>
+    </main>
+    <footer>
+        <div class="total-bar">
+            <div class="dices-rolled-stat">
+                <h2>Dados Rolados: </h2>
+                <p id="dices-rolled">0</p>
+            </div>
+            <div class="total-value-stat">
+                <h2>Valor Total: </h2>
+                <p id="total-value">0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

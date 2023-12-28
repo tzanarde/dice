@@ -1,0 +1,316 @@
+/* RESET */
+* {
+    background-color: #ddd;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    background-color: #6d6d6d;
+    top: 0;
+    width: 100%;
+}
+
+/* TOOLBAR */
+.tool-bar {
+    margin: 10px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.tool-bar,
+.tool-bar * {
+    background-color: transparent;
+}
+
+.dice-buttons,
+.tool-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tool-buttons {
+    gap: 50px;
+}
+
+.roll-button,
+.tool-button {
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: .2s;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#d4-button {
+    background-color: #2ba452;
+    border: 1px solid #218541;
+}
+
+#d4-button:hover {
+    background-color: #218541;
+}
+
+#d6-button {
+    background-color: #6892b0;
+    border: 1px solid #51758f;
+}
+
+#d6-button:hover {
+    background-color: #51758f;
+}
+
+#d8-button {
+    background-color: #ba4d65;
+    border: 1px solid #93384c;
+}
+
+#d8-button:hover {
+    background-color: #93384c;
+}
+
+#d10-button {
+    background-color: #ba7a4d;
+    border: 1px solid #a0673d;
+}
+
+#d10-button:hover {
+    background-color: #a0673d;
+}
+
+#d12-button {
+    background-color: #6cba4d;
+    border: 1px solid #599b3f;
+}
+
+#d12-button:hover {
+    background-color: #599b3f;
+}
+
+#d20-button {
+    background-color: #baa64d;
+    border: 1px solid #908039;
+}
+
+#d20-button:hover {
+    background-color: #908039;
+}
+
+#d100-button {
+    background-color: #4db3ba;
+    border: 1px solid #3a9096;
+}
+
+#d100-button:hover {
+    background-color: #3a9096;
+}
+
+#dices-quantity {
+    background-color: #808080;
+    color: #353535;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 50px;
+    border: 1px solid #464646;
+    border-radius: 5px;
+
+}
+
+#clear-table-button {
+    background-color: #3a3a3a;
+    border: 1px solid #222222;
+    color: #fff;
+}
+
+#clear-table-button:hover {
+    background-color: #222222;
+}
+
+/* MAIN */
+main {
+    height: 100%;
+    width: 100%;
+    background-color: #6d6d6d;
+    margin: auto;
+}
+
+#dices-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0 50px;
+}
+
+/* DICES */
+#dice-4 {
+    background-color: #2ba452;
+    clip-path: polygon(  0% 100%,
+                        50%   0%,
+                       100% 100%);
+    height: 62px;
+    width: 75px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+#dice-6 {
+    background-color: #6892b0;
+    height: 65px;
+    width: 65px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#dice-8,
+#dice-20 {
+    clip-path: polygon( 50%   0%,
+                       100%  25%,
+                       100%  75%,
+                        50% 100%,
+                         0%  75%,
+                         0%  25%);
+    height: 105px;
+    width: 90px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#dice-8 {
+    background-color: #ba4d65;
+}
+
+#dice-20 {
+    background-color: #baa64d;
+}
+
+#dice-10 {
+    background-color: #ba7a4d;
+    clip-path: polygon( 50%   0%,
+                       100%  40%,
+                       100%  65%,
+                        50% 100%,
+                         0%  65%,
+                         0%  40%);
+    height: 105px;
+    width: 95px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#dice-12 {
+    background-color: #6cba4d;
+    clip-path: polygon( 50%   0%,
+                        80%  10%,
+                       100%  33%,
+                       100%  67%,
+                        80%  90%,
+                        50% 100%,
+                        20%  90%,
+                         0%  67%,
+                         0%  33%,
+                        20%  10%);
+    height: 105px;
+    width: 95px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#dice-100 {
+    background-color: #4db3ba;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#dice-value {
+    background-color: transparent;
+}
+
+.dice-stopped {
+    background-color: #f3f3f3;
+}
+
+.dice-rolling {
+    background-color: #eaeaea;
+}
+
+.number-changing {
+    color: #515151;
+}
+
+/* FOOTER */
+footer {
+    background-color: #6d6d6d;
+    bottom: 0;
+    width: 100%;
+}
+
+/* TOTAL-BAR */
+.total-bar {
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+    margin: 10px 50px;
+}
+
+.total-bar,
+.total-bar * {
+    background-color: transparent;
+}
+
+#dices-rolled,
+#total-value {
+    color: black;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+}
